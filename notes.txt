@@ -1,0 +1,18 @@
+[___________Fundamentals to understand_____________]
+
+JavaScript engine is nothing but a program which converts js code into machine code.
+Ryan Dahl saw the potential in Chrome's V8 engine and took it outside the browser and modified it with his own C++ code to make Node JS.
+Node js is a js runtime powered by chrome's v8 engine which can run outside browser i.e web server.
+
+JavaScript is a single threaded language.Which means one process at a time.
+so in context to serving a request from a client the thread will be be blocked until the request is resolved.
+This will lead to increase in wait time for the other process.
+To make the things run smoothly we use the concept of no blocking io with workers which will assist the single thread.
+Here the concept of workers comes from libuv which is a library made for node js which gives us the concept of non blocking io.
+Which uses the system kernel i.e the program that controls the entire operating system. this kernel has multiple threads.
+So Libuv uses system kernel to make multiple threads.Hence worker here are threads. 
+so when client makes a request it will be handled in a single threaded way but behind the scene multiple threads will be used.   
+
+One disadvantage of Node js is not suitable for high processing task.It is suitable for I/O related task 
+i.e db, network,file related task.  
+
