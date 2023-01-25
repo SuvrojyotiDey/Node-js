@@ -1,8 +1,0 @@
-const handler = {};
-handler.notFoundHandler = (requestProperties, callback) => {
-  // console.log(requestProperties, ":::requestProperties::::");
-  callback(404, {
-    message: "request url not found",
-  });
-};
-module.exports = handler;
